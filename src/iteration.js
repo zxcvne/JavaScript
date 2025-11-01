@@ -65,6 +65,7 @@ let arr2 = [1, 2, 3, 4, 5];
 for (let i of arr2) {
   console.log(i);
 }
+
 console.log("---------");
 // for in : Object
 for (let key in person) {
