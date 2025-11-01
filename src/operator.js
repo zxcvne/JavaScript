@@ -15,16 +15,13 @@
 
 // null 병합 연산자
 // A ?? B
-
 let num1;
 let num2 = 10;
-
 console.log(num1 ?? 20);
 console.log(num2 ?? 20);
 
 // 삼항 연산자
 // A ? B : C
-
 let num = 100;
 let result = num % 2 === 0 ? "짝수" : "홀수";
 console.log(result);
