@@ -1,3 +1,5 @@
+// hoisting
+
 // function hoisting
 connectString("hello, ", "world~!!");
 

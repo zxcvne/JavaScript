@@ -1,3 +1,5 @@
+// funtion
+
 let str = "함수";
 
 // 함수 선언식

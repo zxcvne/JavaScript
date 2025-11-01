@@ -46,5 +46,15 @@ const person = {
   },
 };
 
+// add
+person.addr = "seoul";
+person["phone"] = "010-1111-1111";
+
+// delete
+delete person.phone;
+console.log(person);
+
 person.print();
 person["print"]();
+console.log(person.addr);
+console.log(person.phone);
