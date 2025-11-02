@@ -1,4 +1,12 @@
-/* 생성자 */
+/* 프로미스 : 작업을 비동기 처리시 사용 */
+/*
+ * promise 객체가 생성되면 executor함수가 실행되고 이때 state 프로퍼티의 값은 : pending, result 프로퍼티의 값은 undefined이다.
+ * executor 함수는 매개변수로 resolve(value), reject(err)의 값을 가지며
+ * 성공하면 {state : fulfilled, result : value }
+ * 실패하면 {state : rejected, result : error} 값을 갖는다.
+ */
+
+/* 생성자 생성 */
 /* new Promise(executor) */
 /* const executor = (resolve, reject) => {}; */
 
@@ -19,7 +27,8 @@
 // //   }
 // // );
 
-// promise
+/* then() : 프로미스객체를 반환하는 함수에 체이닝하여 프로미스 객체를 사용할 수 있다. */
+
 //   .then((result) => {
 //     console.log(result);
 //   })
@@ -94,6 +103,7 @@ const workC = (value) => {
 //   });
 // });
 
+/* promise chaining */
 workA(10)
   .then((resA) => {
     console.log(`workA : ${resA}`);
