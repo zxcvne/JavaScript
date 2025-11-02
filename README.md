@@ -1,1 +1,1 @@
-# Modern JavaScript
+# JavaScript
