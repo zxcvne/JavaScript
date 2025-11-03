@@ -1,5 +1,6 @@
 import TabBar from "./components/TabBar";
 import Content from "./components/Content";
+import { request } from "./components/api";
 
 export default function App($app) {
   this.state = {
@@ -9,11 +10,11 @@ export default function App($app) {
   };
   const tabBar = new TabBar({
     initialState: "",
-    onClick: (name) => {
+    onClick: async (name) => {
       this.setState({
         ...this.state,
         currentTab: name,
-        photos,
+        photos: await request(name),
       });
     },
   });
@@ -24,4 +25,18 @@ export default function App($app) {
     tabBar.setState(this.state.currentTab);
     tabBar.setState(this.state.photos);
   };
+
+  const init = async () => {
+    try {
+      const initialPhotos = await request();
+      this.setState({
+        ...this.state,
+        photos: initialPhotos,
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  init();
 }
