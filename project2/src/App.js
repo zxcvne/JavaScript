@@ -1,8 +1,8 @@
-import TabBar from "./components/TabBar";
-import Content from "./components/Content";
-import { request } from "./components/api";
+import TabBar from "./components/TabBar.js";
+import Content from "./components/Content.js";
+import { request } from "./components/api.js";
 
-export default function App($app) {
+function App($app) {
   this.state = {
     // 현재 눌린 버튼의 값
     currentTab: "all",
@@ -23,7 +23,7 @@ export default function App($app) {
   this.setState = (newState) => {
     this.state = newState;
     tabBar.setState(this.state.currentTab);
-    tabBar.setState(this.state.photos);
+    content.setState(this.state.photos);
   };
 
   const init = async () => {
@@ -40,3 +40,5 @@ export default function App($app) {
 
   init();
 }
+
+export default App;

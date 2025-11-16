@@ -1,1 +1,3 @@
-export default function Content() {}
+function Content() {}
+
+export default Content;
